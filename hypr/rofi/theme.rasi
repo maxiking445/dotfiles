@@ -1,0 +1,113 @@
+* {
+    bg:             rgba(17, 19, 23, 0.94);
+    bg-alt:         rgba(28, 31, 37, 0.96);
+    fg:             #f2efe8;
+    fg-soft:        #d3cec4;
+    accent:         #b25e3a;
+    accent-2:       #4e7392;
+    urgent:         #d08770;
+    border:         rgba(242, 239, 232, 0.08);
+    selected:       rgba(178, 94, 58, 0.22);
+    selected-strong:#b25e3a;
+    active:         rgba(78, 115, 146, 0.22);
+}
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 720px;
+    border: 1px;
+    border-color: @border;
+    border-radius: 22px;
+    background-color: @bg;
+    padding: 22px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing: 14px;
+    children: [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius: 16px;
+    border: 0px;
+    padding: 12px 14px;
+    spacing: 12px;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    background-color: @accent;
+    text-color: #fff7ec;
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Suche Apps, Befehle oder Fenster...";
+    placeholder-color: @fg-soft;
+}
+
+message {
+    enabled: false;
+}
+
+listview {
+    background-color: transparent;
+    border: 0px;
+    spacing: 8px;
+    lines: 10;
+    columns: 1;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg-soft;
+    border-radius: 16px;
+    padding: 10px 12px;
+    spacing: 12px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg-soft;
+}
+
+element normal.active {
+    background-color: @active;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @fg;
+    border: 1px;
+    border-color: rgba(178, 94, 58, 0.3);
+}
+
+element selected.active {
+    background-color: @selected;
+    text-color: @fg;
+    border: 1px;
+    border-color: @selected-strong;
+}
+
+element-icon {
+    size: 28px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

@@ -1,0 +1,14 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    drun-display-format: "{name}";
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Window";
+    disable-history: false;
+    hover-select: false;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+@theme "/home/max/.config/hypr/rofi/theme.rasi"
